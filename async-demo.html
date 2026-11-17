@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Async JS Practice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ Async JavaScript Practice</h1>
+      <p>Click a button and watch the output log (also printed in the browser console)</p>
+      <a class="nav-link" href="index.html">← Back to Task Manager (Task 2)</a>
+    </header>
+
+    <section class="card demo-section">
+      <h2>1. Execution Context</h2>
+      <p>Hoisting, call stack order and <code>this</code> in different contexts.</p>
+      <button class="btn" id="btn-context">Run</button>
+    </section>
+
+    <section class="card demo-section">
+      <h2>2. Event Loop (sync vs async order)</h2>
+      <p>Sync code → microtasks (Promises) → macrotasks (setTimeout).</p>
+      <button class="btn" id="btn-eventloop">Run</button>
+    </section>
+
+    <section class="card demo-section">
+      <h2>3. setTimeout()</h2>
+      <p>Shows a message after 3 seconds.</p>
+      <button class="btn" id="btn-timeout">Run</button>
+    </section>
+
+    <section class="card demo-section">
+      <h2>4. setInterval() — Countdown</h2>
+      <p>Counts down from 10 to 0, then stops with clearInterval().</p>
+      <button class="btn" id="btn-interval">Start Countdown</button>
+      <span id="countdown" class="countdown">10</span>
+    </section>
+
+    <section class="card demo-section">
+      <h2>5. Callback Functions</h2>
+      <p>A function passed into another function and called later.</p>
+      <button class="btn" id="btn-callback">Run</button>
+    </section>
+
+    <section class="card demo-section">
+      <h2>6. Promise (resolve &amp; reject)</h2>
+      <p>Even number → resolve, odd number → reject. Tested with 4 and 7.</p>
+      <button class="btn" id="btn-promise">Run</button>
+    </section>
+
+    <section class="card demo-section">
+      <h2>7. Async / Await</h2>
+      <p>The same Promise example rewritten with async/await, plus a real API fetch.</p>
+      <button class="btn" id="btn-async">Run</button>
+    </section>
+
+    <section class="card">
+      <div class="log-header">
+        <h2>Output</h2>
+        <button class="btn btn-danger" id="btn-clear">Clear</button>
+      </div>
+      <pre id="log" class="log"></pre>
+    </section>
+  </div>
+
+  <script src="async-demo.js"></script>
+</body>
+</html>

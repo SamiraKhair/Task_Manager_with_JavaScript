@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Task Manager</h1>
+      <p>Add, complete and delete your tasks</p>
+      <a class="nav-link" href="async-demo.html">→ Async JavaScript Practice (Task 1)</a>
+    </header>
+
+    <section class="card">
+      <form id="task-form" class="task-form">
+        <input id="task-input" type="text" placeholder="What needs to be done?" maxlength="120" autocomplete="off" />
+        <button type="submit" class="btn">Add Task</button>
+      </form>
+      <p id="form-error" class="form-error"></p>
+    </section>
+
+   
+    <section class="card stats">
+      <div class="stat">
+        <div id="total-count" class="stat-value">0</div>
+        <div class="stat-label">Total</div>
+      </div>
+      <div class="stat completed">
+        <div id="completed-count" class="stat-value">0</div>
+        <div class="stat-label">Completed</div>
+      </div>
+      <div class="stat pending">
+        <div id="pending-count" class="stat-value">0</div>
+        <div class="stat-label">Pending</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div id="filters" class="filters">
+        <button type="button" class="filter-btn active" data-filter="all">Show All</button>
+        <button type="button" class="filter-btn" data-filter="completed">Show Completed</button>
+        <button type="button" class="filter-btn" data-filter="pending">Show Pending</button>
+      </div>
+      <div id="error" class="error hidden"></div>
+      <div id="loader" class="loader hidden"></div>
+      <ul id="task-list" class="task-list"></ul>
+      <p id="empty-state" class="empty-state hidden">No tasks yet. Add one above! 🎉</p>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
